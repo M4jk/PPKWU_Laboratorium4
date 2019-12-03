@@ -1,0 +1,5 @@
+Przejście do strony mobilnej następuje poprzez wpisanie adresu http://localhost:8080/ .
+
+Na stronie jest pole typu input, do którego można wpisać szukaną frazę, na bazie której będzie wyszukiwany pracownik.
+Po kliknięciu przycisku, następuje przekierowanie na stronę z kartami pracowników, którzy zostali wyszukani. Pod kartą pracownika jest przycisk, 
+który generuje plik .vcf dla danego pracownika.
