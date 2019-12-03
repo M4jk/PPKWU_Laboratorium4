@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCard</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+
+</head>
+<body>
+
+<div class="container starter-template">
+
+    <div class="text-center mb-3 mt-3">
+        <h3>
+            <span th:text="'Podaj imię i/lub nazwisko, aby wyszukać pracowników'"></span>
+        </h3>
+    </div>
+
+    <div class="row">
+        <form class="col-sm-12" action="#" th:action="@{/cards}" th:object="${userSearch}" method="post">
+            <input class="form-control col-sm-12 mb-3" type="text" th:field="*{name}" />
+            <input class="btn btn-primary col-12  col-sm-2 offset-sm-5" type="submit" th:value="Szukaj"/>
+        </form>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>VCard</title>
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/4.3.1/css/bootstrap.min.css}" />
+    <script th:src="@{/webjars/jquery/3.1.1/jquery.min.js}"></script>
+    <script th:src="@{/webjars/bootstrap/4.3.1/js/bootstrap.min.js}"></script>
+</head>
+<body>
+
+<div class="container-fluid">
+
+    <h3 class="text-center">
+        <span th:text="'Karty pracowników dla szukanej frazy: ' + ${userInputSearch.getName()}"></span>
+    </h3>
+
+    <div class="row">
+        <div class="card mb-2 col-lg-3 col-md-4 col-sm-6 col-xl-3 p-3 border-0" th:each="employee : ${employees}">
+            <div style="border: 3px solid grey">
+                <div class="card-header" th:text="(${employee.getTitle()} ? ${employee.getTitle()} + ' ' : '') + ${employee.getName()}"></div>
+                <div class="card-body" th:text="${employee.getWorkingPlace()}"></div>
+            </div>
+            <a class="btn btn-info" th:href="@{'/vcard/' + ${employee.toString()}}">
+                <span>Wygeneruj vCard</span>
+            </a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
