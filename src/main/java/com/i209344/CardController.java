@@ -93,6 +93,10 @@ public class CardController {
             vcard.addTitle(person.title);
         }
 
+        if (person.workingPlace != null) {
+            vcard.setOrganization(person.workingPlace);
+        }
+
         vcard.setFormattedName(person.getName());
         vcard.setRevision(Revision.now());
 

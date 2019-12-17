@@ -1,6 +1,8 @@
 BEGIN:VCARD
 VERSION:4.0
 PRODID:ez-vcard 0.10.5
-FN:Wojciech Kowalski
-REV:20191203T153154Z
+TITLE:dr inż.
+ORG:I24 - Instytut Informatyki Stosowanej
+FN:Paweł Kapusta
+REV:20191217T160255Z
 END:VCARD
