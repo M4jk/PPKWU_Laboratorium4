@@ -32,7 +32,7 @@ public class CardController {
         return "index";
     }
 
-    @RequestMapping(value = "/cards", method = RequestMethod.POST)
+    @RequestMapping(value = "/cards", method = RequestMethod.GET)
     public String search(@ModelAttribute UserSearch userSearch, Model model) throws IOException {
         model.addAttribute("userInputSearch", userSearch);
         String calendarEndpoint="https://adm.edu.p.lodz.pl/user/users.php?search=" + userSearch.name;

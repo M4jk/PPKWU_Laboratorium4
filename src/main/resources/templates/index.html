@@ -20,7 +20,7 @@
     </div>
 
     <div class="row">
-        <form class="col-sm-12" action="#" th:action="@{/cards}" th:object="${userSearch}" method="post">
+        <form class="col-sm-12" action="#" th:action="@{/cards}" th:object="${userSearch}" method="get">
             <input class="form-control col-sm-12 mb-3" type="text" th:field="*{name}" />
             <input class="btn btn-primary col-12  col-sm-2 offset-sm-5" type="submit" th:value="Szukaj"/>
         </form>
